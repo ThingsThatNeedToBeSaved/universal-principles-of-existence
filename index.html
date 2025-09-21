@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Universal Principles of Existence</title>
+        <style>
+            body {
+                font-family: system-ui, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                color: #222;
+                background: #fafafa;
+            }
+            header {
+                background: #2c3e50;
+                color: white;
+                padding: 1.5rem;
+                text-align: center;
+            }
+            header h1 {
+                margin: 0;
+                font-size: 1.8rem;
+            }
+            /* Sticky timeline navigation */
+            nav.timeline {
+                position: sticky;
+                top: 0;
+                background: #fff;
+                border-bottom: 1px solid #ddd;
+                z-index: 1000;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            nav.timeline ul {
+                list-style: none;
+                margin: 0;
+                padding: 0.5rem 1rem;
+                display: flex;
+                gap: 1rem;
+                justify-content: space-between;
+            }
+            nav.timeline li {
+                display: inline-block;
+                position: relative;
+            }
+            nav.timeline a {
+                text-decoration: none;
+                color: #333;
+                padding: 0.4rem 0.8rem;
+                border-radius: 6px;
+                transition: background 0.3s, color 0.3s;
+            }
+            nav.timeline a:hover {
+                background: #eee;
+            }
+            nav.timeline a.active {
+                background: #2c3e50;
+                color: #fff;
+                font-weight: bold;
+            }
+            /* Tooltip styling (desktop only) */
+            @media (min-width: 768px) {
+                nav.timeline li[title]:hover::after {
+                    content: attr(title);
+                    position: absolute;
+                    bottom: -2rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: #333;
+                    color: #fff;
+                    padding: 0.3rem 0.6rem;
+                    border-radius: 4px;
+                    font-size: 0.8rem;
+                    white-space: nowrap;
+                    z-index: 2000;
+                }
+            }
+            /* Progress bar (desktop only) */
+            @media (min-width: 768px) {
+                .progress-bar {
+                    position: fixed;
+                    top: 48px;
+                    left: 0;
+                    height: 4px;
+                    background: #2c3e50;
+                    width: 0%;
+                    z-index: 1500;
+                }
+            }
+            main {
+                max-width: 800px;
+                margin: 2rem auto;
+                padding: 0 1rem;
+            }
+            section {
+                margin-bottom: 3rem;
+            }
+            h2 {
+                margin-top: 0;
+                color: #2c3e50;
+            }
+            h3 {
+                margin-top: 1.5rem;
+                color: #444;
+            }
+            .insights {
+                background: #f0f4f8;
+                padding: 1rem;
+                border-left: 4px solid #2c3e50;
+                margin-top: 1rem;
+            }
+            /* Conclusion hub */
+            .conclusion-hub {
+                background: #f9f9f9;
+                border: 1px solid #ddd;
+                border-radius: 12px;
+                padding: 1.5rem;
+                text-align: center;
+            }
+            .hub-grid {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                justify-content: center;
+                margin-top: 1rem;
+            }
+            .hub-card {
+                flex: 1 1 200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                background: #fff;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                padding: 1rem;
+                transition: transform 0.2s, box-shadow 0.2s;
+                text-decoration: none;
+            }
+            .hub-card:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+            .hub-card h4 {
+                margin: 0;
+                color: #2c3e50;
+                font-weight: bold;
+                display: block;
+            }
+            .hub-card p {
+                color: #2c3e50;
+                margin-bottom: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Universal Principles of Existence</h1>
+        </header>
+
+        <!-- Sticky timeline -->
+        <nav class="timeline">
+            <ul>
+                <li title="Principle 1: Awareness">
+                    <a href="#awareness">Awareness</a>
+                </li>
+                <li title="Principle 2: The Universal Cycle">
+                    <a href="#cycle">Cycle</a>
+                </li>
+                <li title="Principle 3: The Vessel and Its Purpose">
+                    <a href="#vessel">Vessel</a>
+                </li>
+                <li
+                    title="Principle 4: Transmission of Structure and Functionality"
+                >
+                    <a href="#transmission">Transmission</a>
+                </li>
+                <li title="Principle 5: Creation and Decay of Transmission">
+                    <a href="#creation">Creation & Decay</a>
+                </li>
+                <li
+                    title="Principle 6: The Qualities of Infinity and Functional Stability"
+                >
+                    <a href="#infinity">Infinity</a>
+                </li>
+                <li title="Principle 7: Non-Existence, 0 and 1">
+                    <a href="#zeroone">0 & 1</a>
+                </li>
+                <li
+                    title="Principle 8: The Limits of Logic in Describing Existence"
+                >
+                    <a href="#logic">Limits of Logic</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="progress-bar"></div>
+
+        <main>
+            <!-- Principle 1 -->
+            <section id="awareness">
+                <h2>Principle 1: Awareness</h2>
+                <p>
+                    Awareness is the foundation of all existence. Without
+                    awareness, there is no recognition of being, no distinction
+                    between presence and absence. Awareness is not just passive
+                    noticing but an active condition that allows reality to be
+                    experienced and reflected upon. It frames every act of
+                    perception, thought, and feeling, serving as the entry point
+                    to all further principles.
+                </p>
+                <h3>Observation Points</h3>
+                <ul>
+                    <li>
+                        Notice moments when you suddenly become aware of your
+                        breathing or posture.
+                    </li>
+                    <li>
+                        Recognize how awareness makes distinctions possible —
+                        light and dark, sound and silence.
+                    </li>
+                    <li>
+                        Observe how awareness expands when attention is steady
+                        and contracts when distracted.
+                    </li>
+                </ul>
+                <div class="insights">
+                    <strong>Key Insight:</strong> Awareness is the condition for
+                    experience itself. It is the ground upon which all other
+                    processes unfold.
+                </div>
+            </section>
+
+            <!-- Principle 2 -->
+            <section id="cycle">
+                <h2>Principle 2: The Universal Cycle</h2>
+                <p>
+                    Existence does not appear as isolated events. Everything
+                    that comes into being is already in relation before it
+                    becomes distinct. Relation precedes becoming — without
+                    context, nothing can arise. This interdependence provides
+                    the clarity needed to understand cycles not as separate
+                    acts, but as movements within a larger continuity.
+                </p>
+                <p>
+                    The universal cycle can be observed in four stages. Each
+                    stage is not strictly separate but flows into the next,
+                    forming a rhythm of existence:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Emergence (Beginning):</strong> A new form,
+                        thought, or state arises. It never appears from nothing
+                        but always emerges from conditions already present.
+                    </li>
+                    <li>
+                        <strong>Continuation (Sustaining):</strong> What has
+                        emerged is maintained through energy, attention, or
+                        structure. Continuation shows how existence requires
+                        balance to endure.
+                    </li>
+                    <li>
+                        <strong>Transformation (Change):</strong> No state
+                        remains fixed. Over time, each form alters, adapts, or
+                        declines. Transformation prevents stagnation and allows
+                        growth.
+                    </li>
+                    <li>
+                        <strong>Completion (Return/Integration):</strong> Every
+                        cycle reaches a point of closure. What has been is
+                        integrated into what will be, making way for new
+                        emergence.
+                    </li>
+                </ul>
+                <h3>Observation Points</h3>
+                <ul>
+                    <li>
+                        In nature: day and night, seasons, growth and decay.
+                    </li>
+                    <li>
+                        In human life: birth, growth, learning, aging, death.
+                    </li>
+                    <li>
+                        In thought and emotion: curiosity arising, being held,
+                        shifting, and fading.
+                    </li>
+                    <li>
+                        In societies: cultures forming, stabilizing, changing,
+                        and dissolving.
+                    </li>
+                </ul>
+                <div class="insights">
+                    <strong>Key Insight:</strong> Clarity comes from seeing the
+                    whole cycle — emergence, continuation, transformation, and
+                    completion — and recognizing that relation always precedes
+                    becoming.
+                </div>
+            </section>
+
+            <!-- Principle 3 -->
+            <section id="vessel">
+                <h2>Principle 3: The Vessel and Its Purpose</h2>
+                <p>
+                    Every form of existence requires a vessel — a structure that
+                    holds, channels, or expresses it. A vessel can be material,
+                    such as the body; mental, such as a thought system; or
+                    collective, such as a culture. The vessel is not secondary
+                    to what it carries: its shape, capacity, and durability
+                    define the possibilities of what can be expressed. Purpose
+                    is therefore not imposed but arises from the relation
+                    between vessel and content.
+                </p>
+                <h3>Observation Points</h3>
+                <ul>
+                    <li>
+                        In the body: how physical limits shape what experiences
+                        are possible.
+                    </li>
+                    <li>
+                        In the mind: how language and concepts act as vessels
+                        for thought.
+                    </li>
+                    <li>
+                        In culture: how institutions or traditions shape
+                        collective life.
+                    </li>
+                    <li>
+                        In technology: how tools extend or restrict what can be
+                        done.
+                    </li>
+                </ul>
+                <div class="insights">
+                    <strong>Key Insight:</strong> Vessels provide the structure
+                    that gives rise to purpose. Without vessels, existence
+                    cannot take form.
+                </div>
+            </section>
+
+            <!-- Principle 4 -->
+            <section id="transmission">
+                <h2>
+                    Principle 4: Transmission of Structure and Functionality
+                </h2>
+                <p>
+                    Existence does not end with the vessel. For continuity, what
+                    has been formed must be transmitted. Transmission ensures
+                    that structures, patterns, and functions move across time
+                    and relation. This transmission may be genetic, cultural, or
+                    informational, but in every case it preserves continuity
+                    while allowing adaptation.
+                </p>
+                <h3>Observation Points</h3>
+                <ul>
+                    <li>In biology: the passing of genetic information.</li>
+                    <li>
+                        In society: traditions, stories, or knowledge carried
+                        forward.
+                    </li>
+                    <li>In technology: data replicated across systems.</li>
+                    <li>
+                        In personal life: habits and memories shaping future
+                        action.
+                    </li>
+                </ul>
+                <div class="insights">
+                    <strong>Key Insight:</strong> Transmission is the bridge
+                    across time. It connects past with future while allowing
+                    present forms to evolve.
+                </div>
+            </section>
+
+            <!-- Principle 5 -->
+            <section id="creation">
+                <h2>Principle 5: Creation and Decay of Transmission</h2>
+                <p>
+                    Transmission is not permanent. Every form that is carried
+                    forward eventually weakens, alters, or dissolves. Creation
+                    arises as the echo of infinity manifesting in time, while
+                    decay returns what was created back into openness. These two
+                    processes are not opposed but mutually necessary: creation
+                    without decay leads to rigidity, while decay without
+                    creation leads to emptiness. Together they sustain balance
+                    and renewal.
+                </p>
+                <h3>Observation Points</h3>
+                <ul>
+                    <li>
+                        In nature: forests regenerate through cycles of growth
+                        and decay.
+                    </li>
+                    <li>
+                        In thought: ideas emerge, spread, and eventually lose
+                        relevance.
+                    </li>
+                    <li>
+                        In culture: art forms or languages evolve while older
+                        forms disappear.
+                    </li>
+                    <li>
+                        In personal life: habits formed, broken, and re-formed.
+                    </li>
+                </ul>
+                <div class="insights">
+                    <strong>Key Insight:</strong> Creation and decay are
+                    inseparable. Both sustain existence by keeping it dynamic
+                    and open to renewal.
+                </div>
+            </section>
+
+            <!-- Principle 6 -->
+            <section id="infinity">
+                <h2>
+                    Principle 6: The Qualities of Infinity and Functional
+                    Stability
+                </h2>
+                <p>
+                    Infinity is not a number but a quality of existence: there
+                    is no final boundary to becoming. Yet infinity alone is
+                    unstable — it requires grounding through mind, soul, and
+                    matter working in balance. Infinity provides endless
+                    possibility, while stability ensures coherence. Together
+                    they allow existence to be both expansive and functional.
+                </p>
+                <h3>Observation Points</h3>
+                <ul>
+                    <li>
+                        In nature: the unending diversity of life balanced by
+                        stable ecosystems.
+                    </li>
+                    <li>
+                        In thought: the limitless generation of ideas
+                        constrained by logic and coherence.
+                    </li>
+                    <li>
+                        In emotion: boundless potential for feeling guided by
+                        integration into meaning.
+                    </li>
+                    <li>
+                        In societies: open-ended cultural change stabilized by
+                        shared norms or institutions.
+                    </li>
+                </ul>
+                <div class="insights">
+                    <strong>Key Insight:</strong> Infinity without stability
+                    collapses into chaos. Stability without infinity collapses
+                    into rigidity. Existence requires both.
+                </div>
+            </section>
+
+            <!-- Principle 7 -->
+            <section id="zeroone">
+                <h2>Principle 7: Non-Existence, 0 and 1</h2>
+                <p>
+                    Zero does not exist in matter. It is a logical construct of
+                    the mind. Existence begins with one: a presence, a being, a
+                    form. All other numbers are expressions of relation to one —
+                    addition, division, multiplication, absence. Zero and
+                    infinity are boundaries of thought rather than realities of
+                    matter. They expand understanding but also show the creative
+                    role of mind in generating concepts beyond what is
+                    materially present.
+                </p>
+                <h3>Observation Points</h3>
+                <ul>
+                    <li>
+                        In mathematics: zero as a placeholder and infinity as an
+                        abstraction.
+                    </li>
+                    <li>
+                        In language: words for “nothing” or “everything” shaping
+                        thought but not direct experience.
+                    </li>
+                    <li>
+                        In life: absence felt as an idea (nothing here) even
+                        though awareness itself is never nothing.
+                    </li>
+                </ul>
+                <div class="insights">
+                    <strong>Key Insight:</strong> Zero and infinity reveal the
+                    mind’s ability to construct logical concepts. They do not
+                    exist materially but serve as tools for clarity and
+                    exploration.
+                </div>
+            </section>
+
+            <!-- Principle 8 -->
+            <section id="logic">
+                <h2>
+                    Principle 8: The Limits of Logic in Describing Existence
+                </h2>
+                <p>
+                    Logic provides structure, clarity, and explanation. It
+                    creates systems that allow existence to be understood,
+                    compared, and predicted. Yet logic is never complete:
+                    existence is always expanding, always generating more than
+                    logic can capture. Emotion, intuition, and direct awareness
+                    reveal aspects of being that logic frames but cannot
+                    exhaust. To rely on logic alone is to mistake the map for
+                    the territory.
+                </p>
+                <h3>Observation Points</h3>
+                <ul>
+                    <li>
+                        Notice how emotions can be felt clearly but are
+                        difficult to fully explain in words.
+                    </li>
+                    <li>
+                        Observe how new discoveries in science often challenge
+                        or exceed older logical frameworks.
+                    </li>
+                    <li>
+                        Reflect on how awareness can recognize experience even
+                        before analysis defines it.
+                    </li>
+                </ul>
+                <div class="insights">
+                    <strong>Key Insight:</strong> Logic is essential but
+                    partial. Awareness integrates what logic cannot capture,
+                    sustaining a fuller understanding of existence.
+                </div>
+            </section>
+
+            <!-- Conclusion & Hub -->
+            <section id="conclusion">
+                <h2>Conclusion & Further Exploration</h2>
+                <p>
+                    Together, these eight principles form a coherent view of
+                    existence: from awareness to cycles, vessels, transmissions,
+                    infinity, and the boundaries of logic. They show that
+                    balance between mind, soul, and matter sustains meaningful
+                    existence. No principle stands alone; each unfolds into the
+                    next, forming a living structure of clarity and integration.
+                </p>
+                <p>
+                    <em
+                        >These projects form a connected ecosystem — explore
+                        them below.</em
+                    >
+                </p>
+                <div class="conclusion-hub">
+                    <div class="hub-grid">
+                        <a
+                            href="https://thingsthatneedtobesaved.github.io/curiosity-compass/"
+                            class="hub-card"
+                        >
+                            <h4>Curiosity Compass</h4>
+                            <p>
+                                A practical map of curiosity, memory,
+                                projection, and presence to support inquiry.
+                            </p>
+                        </a>
+                        <a
+                            href="https://thingsthatneedtobesaved.github.io/mupp/"
+                            class="hub-card"
+                        >
+                            <h4>Mutual Understanding Policy Project</h4>
+                            <p>
+                                Practical structures for fostering shared
+                                understanding in groups and institutions.
+                            </p>
+                        </a>
+                        <a href="#" class="hub-card">
+                            <h4>Universal Principles</h4>
+                            <p>
+                                The current site — the integrated set of
+                                principles grounding how existence is
+                                approached.
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script>
+            // Smooth scroll
+            document.querySelectorAll("nav.timeline a").forEach((anchor) => {
+                anchor.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    document
+                        .querySelector(this.getAttribute("href"))
+                        .scrollIntoView({
+                            behavior: "smooth",
+                        });
+                });
+            });
+
+            // Highlight active section
+            const sections = document.querySelectorAll("main section");
+            const navLinks = document.querySelectorAll("nav.timeline a");
+
+            window.addEventListener("scroll", () => {
+                let current = "";
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop - 120;
+                    if (scrollY >= sectionTop) {
+                        current = section.getAttribute("id");
+                    }
+                });
+                navLinks.forEach((link) => {
+                    link.classList.remove("active");
+                    if (link.getAttribute("href") === "#" + current) {
+                        link.classList.add("active");
+                    }
+                });
+
+                // Progress bar (desktop only)
+                const progressBar = document.querySelector(".progress-bar");
+                const scrollTop = window.scrollY;
+                const docHeight =
+                    document.body.scrollHeight - window.innerHeight;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+                if (window.innerWidth >= 768) {
+                    progressBar.style.width = scrollPercent + "%";
+                } else {
+                    progressBar.style.width = "0";
+                }
+            });
+        </script>
+    </body>
+</html>
